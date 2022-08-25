@@ -1,6 +1,6 @@
 ### Presentacion
 
-### 1. Incluir su historial académico:
+### 1. Historial académico:
 #### **Horario**
 Materia / Docente | Lunes | Martes | Miercoles | Jueves | Viernes
 --- | --- | --- | --- | --- | ---
