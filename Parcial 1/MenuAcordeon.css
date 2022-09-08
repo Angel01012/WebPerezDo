@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul
+{
+    list-style: none;
+    width: 300px;
+    height: 600px;
+
+}
+ul > li > ul
+{
+display: none;
+}
+ul > li:hover> ul
+{
+    display: block;
+    height: 100%;
+}
+.Opcion
+{
+    font-size: 35px;
+    background: rgb(172, 172, 172);
+    color: black;
+}
+a 
+{
+    color: white;
+    text-decoration: none;
+}
+.subOpcion
+{
+    padding-left: 20px;
+    background: rgb(68, 68, 68);
+    color: white;
+}
