@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contenedor
+{
+    width: 100vw;
+    height: 100vw;
+}
+div.sidebar {
+    float: left;
+    background-color: grey;
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+}
+a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+}
+a:hover {
+    background-color: blue;
+    color: white;
+}
+div.content {
+    float: left;
+    width: calc(100% - 200px);
+    background-color: aqua;
+    padding: 1px 16px;
+    height: 100%;
+}
+
+.contenidoOpcion { display: none;}
+
+@media screen and (max-width: 1200px){
+    div.sidebar{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    .sidebar a {flpat: left}
+    div.content {margin-left: 0;
+    width: 100%;}
+
+}
+
+@media screen and (max-width: 600px){
+
+}

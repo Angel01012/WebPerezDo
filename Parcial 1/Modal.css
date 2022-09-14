@@ -11,7 +11,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: silver;
+    background: none;
     z-index: 99999;
     opacity: 0;
     pointer-events: none;
@@ -30,12 +30,35 @@
     padding: 5px;
     border-radius: 10px;
     background: white;
+    font-size: 20px;
 }
 .botonabrir:hover
 {
     background: blue; color: white;
+    border: 2px;
 }
 .botoncerrar:hover
 {
     background: blue; color: white;
+}
+#Titulo
+{
+    text-align: center;
+    color: black;
+}
+#Estilo
+{
+    background: none;
+    color: rgb(58, 58, 58);
+    font-size: 30px;
+}
+#Estilo3
+{
+    background: none;
+    color: blue;
+    font-size: 18px;
+}
+#Fondo
+{
+    background-color: silver;
 }
