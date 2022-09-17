@@ -1,7 +1,7 @@
 # Propiedades Flexbox
-***
-## Propiedades para el padre (contenedor flexible)
-### **Monitor**
+---
+## **Propiedades para el padre (contenedor flexible)**
+## Monitor
  #### Esto define un contenedor flexible; en línea o bloque dependiendo del valor dado. Permite un contexto flexible para todos sus hijos directos.
 `.container {
 display: flex; /* or inline-flex */ }`
@@ -110,22 +110,60 @@ center: elementos centrados en el contenedor
 #### El comportamiento podría considerarse como un canalón mínimo , como si el canalón fuera más grande de alguna manera (debido a algo como justify-content: space-between;), entonces la brecha solo tendrá efecto si ese espacio termina siendo más pequeño.
 
 #### No es exclusivamente para flexbox, también gapfunciona en cuadrícula y diseño de varias columnas.
+<br>
 
+---
+---
+## **Propiedades para los niños(artículos flexibles)**
+## ordenar
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/order.svg" width=400>
 
+#### De forma predeterminada, los elementos flexibles se presentan en el orden de origen. Sin embargo, la orderpropiedad controla el orden en que aparecen en el contenedor flexible.
+`.item {
+  order: 5; /* default is 0 */
+}`
+#### Los artículos con el mismo orderorden de origen vuelven.
+---
+## crecimiento flexible
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg" width=400>
 
+#### Esto define la capacidad de crecimiento de un elemento flexible si es necesario. Acepta un valor sin unidades que sirve como proporción. Determina qué cantidad de espacio disponible dentro del contenedor flexible debe ocupar el artículo.
 
+#### Si todos los elementos se han flex-growestablecido en 1, el espacio restante en el contenedor se distribuirá por igual a todos los niños. Si uno de los hijos tiene un valor de 2, ese hijo ocuparía el doble de espacio que cualquiera de los otros (o lo intentará, al menos).
+`.item {
+  flex-grow: 4; /* default 0 */
+}`
+#### Los números negativos no son válidos.
+---
+## flexión-encogimiento
+#### Esto define la capacidad de que un elemento flexible se encoja si es necesario.
+`.item {
+  flex-shrink: 3; /* default 1 */
+}`
+#### Los números negativos no son válidos.
+---
+## Base flexible
+#### Esto define el tamaño predeterminado de un elemento antes de que se distribuya el espacio restante. Puede ser una longitud (por ejemplo, 20 %, 5 rem, etc.) o una palabra clave. La autopalabra clave significa "mirar mi propiedad de ancho o alto" (lo cual fue hecho temporalmente por la main-sizepalabra clave hasta que quedó en desuso). La palabra clave significa "dimensionarlo en función del contenido del elemento". Esta palabra clave aún no es compatible , contentpor lo que es difícil probarla y saber qué hacen sus hermanos .max-contentmin-contentfit-content
 
+`.item {
+  flex-basis:  | auto; /* default auto */
+}`
+#### Si se establece en 0, el espacio adicional alrededor del contenido no se tiene en cuenta. Si se establece en auto, el espacio adicional se distribuye en función de su flex-growvalor. Vea este gráfico.
+---
+## Flexionar
+#### Esta es la abreviatura de flex-grow, flex-shrinky flex-basiscombinado. Los parámetros segundo y tercero ( flex-shrinky flex-basis) son opcionales. El valor predeterminado es 0 1 auto, pero si lo configura con un solo valor numérico, como flex: 5;, eso cambia flex-basisa 0%, por lo que es como configurar flex-grow: 5; flex-shrink: 1; flex-basis: 0%;.
+`.item {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}`
+#### Se recomienda utilizar esta propiedad abreviada en lugar de establecer las propiedades individuales. La taquigrafía establece los otros valores de forma inteligente.
+---
+## Alinearse
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-self.svg" width=400>
 
+#### Esto permite anular la alineación predeterminada (o la especificada por align-items) para elementos flexibles individuales.
+#### Consulte la align-itemsexplicación para comprender los valores disponibles.
 
-
-
-
-
-
-
-
-
-
-
-
-
+`.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}`
+#### Tenga en cuenta que float, cleary vertical-alignno tienen efecto en un elemento flexible.
