@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul
+{
+    list-style: none;
+    width: 300px;
+    height: 600px;
+
+}
+ul > li > ul
+{
+display: none;
+}
+ul > li:hover> ul
+{
+    display: block;
+    height: 100%;
+}
+.Opcion
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    background: rgb(172, 172, 172);
+    color: black;
+}
+a 
+{
+    color: white;
+    text-decoration: none;
+}
+.subOpcion
+{
+    text-align: initial;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    background: rgb(68, 68, 68);
+    color: white;
+}
+h1
+{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: blue;
+}
+.ventanaModal
+{
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: none;
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+}
+.ventanaModal:target
+{
+    opacity: 1;
+    pointer-events: auto;
+    background: none;
+}
+.ventanaModal > div
+{
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px;
+    border-radius: 10px;
+    background: white;
+    font-size: 20px;
+}
+.botonabrir:hover
+{
+    background: blue; color: white;
+    border: 2px;
+}
+.botoncerrar:hover
+{
+    background: blue; color: white;
+}
+#Titulo
+{
+    text-align: center;
+    color: black;
+}
+#Estilo
+{
+    background: none;
+    color: rgb(58, 58, 58);
+    font-size: 30px;
+}
+#Estilo3
+{
+    background: none;
+    color: blue;
+    font-size: 18px;
+}
+#Fondo
+{
+    background-color: rgb(169, 168, 168);
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: red;
+    text-align: center;
+}
+h3{
+    font-size: 18px;
+    color: green;
+}
