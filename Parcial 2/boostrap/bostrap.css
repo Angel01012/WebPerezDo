@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contenedor
+{
+    border: 2px solid black;
+}
+.titulo
+{
+    background-color: aquamarine;
+    color: cornflowerblue;
+}
+.col1
+{
+    background-color: red;
+}
+.col2
+{
+    background-color: blue;
+}
+.col3
+{
+    background-color: yellowgreen;
+}
