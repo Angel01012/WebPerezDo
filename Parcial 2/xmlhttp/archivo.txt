@@ -1,0 +1,3 @@
+Un AFD tiene un conjunto finito de estados y un conjunto finito de símbolos de entrada. <br></br>
+El término “determinista” hace referencia al hecho de que para cada entrada sólo existe uno y sólo un estado al que el autómata puede hacer la transición a partir de su estado actual.<br></br>
+Un estado se diseña para que sea el estado inicial, y cero o más estados para que sean estados de aceptación. Una función de transición determina cómo cambia el estado cada vez que se procesa un símbolo de entrada.
