@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fech</title>
+</head>
+<body>
+    <button id="btnPeticion">Hacer Peticion uwu</button>
+    <img id="img" >
+    <div id="idMensaje"></div>
+    <script>
+        document.getElementById("btnPeticion").addEventListener("click",function(){
+            //console.log("Peticion");
+            fetch("https://random.imagecdn.app/500/150")
+            .then(respuesta=> respuesta.json())
+            .then(datojson=>console.log(document.getElementById("img").innerText=datojson.value));
+        });
+    </script>
+</body>
+</html>
