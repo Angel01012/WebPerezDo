@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="modulo.js"></script>
+    <title>Modulos</title>
+</head>
+<body>
+    <label for="cad">Ingresa una cadena</label>
+    <input id="cad" type="text">
+    <button id="btnProcesar"> Procesar</button>
+    <input id="cadm" type="text" disabled>
+</body>
+<script type="module">
+    import {mayusculas,longuitud} from "./modulo.js";
+    //import * as funciones from "./modulo.js";   
+    document.getElementById("btnProcesar").addEventListener("click",function() {
+        var varcad = document.getElementById("cad").value;
+        var varcadM = mayusculas(varcad);
+        document.getElementById("cadm").value=varcadM;
+    });
+</script>
+</html>
