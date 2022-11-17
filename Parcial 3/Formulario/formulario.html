@@ -13,39 +13,39 @@
         <div class="row">
             <div class="form-group col-sm-12 col-md-6 col-lg-6">
                 <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="idNombre" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="Nombre" aria-describedby="emailHelp">
             </div>
             <div class="form-group col-sm-12 col-md-6 col-lg-6">
                 <label for="exampleInputPassword1" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="idUsuario">
+                <input type="text" class="form-control" id="Usuario">
             </div>
         </div>
         <div class="row">
           <div class="form-group col-sm-12 col-md-6 col-lg-4">
               <label for="exampleInputEmail1" class="form-label">Telefono</label>
-              <input type="text" class="form-control" id="idTelefonos" aria-describedby="emailHelp">
+              <input type="text" class="form-control" id="Telefono" aria-describedby="emailHelp">
           </div>
           <div class="form-group col-sm-12 col-md-6 col-lg-8">
               <label for="exampleInputPassword1" class="form-label">Edad</label>
-              <input type="text" class="form-control" id="idEdad">
+              <input type="text" class="form-control" id="Edad">
           </div>
       </div>
         <div class="row">
             <div class="form-group col-sm-12 col-md-3 col-lg-4">
                 <label for="exampleInputEmail1" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="idCorreo" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="Correo" aria-describedby="emailHelp">
             </div>
             <div class="form-group col-sm-12 col-md-6 col-lg-4">
                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="idContraseña">
+                <input type="password" class="form-control" id="Contraseña">
             </div>
             <div class="form-group col-sm-12 col-md-3 col-lg-4">
                 <label for="exampleInputPassword1" class="form-label">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="idConfirmarContra">
+                <input type="password" class="form-control" id="ConfirmarContra">
             </div>
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button type="button" class="btn btn-primary" id="btnAgregar">Agregar</button>
         <button type="button" class="btn btn-primary" id="liveToastBtn">Mensaje</button>
 
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -93,6 +93,19 @@ Click en el boton :)
   document.getElementById('btnModal').addEventListener('click',() => {
   const myModal = new bootstrap.Modal('#myModal',{})
   myModal.show();
+});
+document.getElementById("btnAgregar").addEventListener("click",async () =>{
+  let respuesta= await fetch ('formulario.php');
+  let dato =await respuesta.json();
+  document.getElementById("Nombre").value=dato.Nombre;
+  document.getElementById("Usuario").value=dato.Usuario;
+  document.getElementById("Telefono").value=dato.Telefono;
+  document.getElementById("Edad").value=dato.Edad;  
+  document.getElementById("Correo").value=dato.Correo;
+  document.getElementById("Contraseña").value=dato.Contraseña;
+  document.getElementById("ConfirmarContra").value=dato.ConfirmarContra;
+
+
 });
   </script>
 </html>
