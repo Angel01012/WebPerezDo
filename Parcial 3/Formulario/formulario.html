@@ -102,7 +102,6 @@ document.getElementById("btnAgregar").addEventListener("click",async () =>{
   })
   let dato = await respuesta.json();
   document.getElementById("Nombre").value=dato.Nombre;
-  document.getElementById("Usuario").value=dato.Usuario;
   document.getElementById("Telefono").value=dato.Telefono;
   document.getElementById("Edad").value=dato.Edad;  
   document.getElementById("Correo").value=dato.Correo;
