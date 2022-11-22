@@ -1,7 +1,7 @@
 <?php
-$regisro["Nombre"]="Angel";
-$regisro["Usuario"]="Angel001012";
-$regisro["Telefono"]="8672809248";
+$regisro["Nombre"]="Eduardo";
+$regisro["Usuario"]="Lalito";
+$regisro["Telefono"]="00123456789";
 $regisro["Edad"]="21";
 $regisro["Correo"]="perezangel2015@gmail.com";
 $regisro["Contraseña"]="Password";
