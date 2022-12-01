@@ -1,5 +1,11 @@
 <!doctype html>
 <html lang="en">
+<?php
+  $FechaHoy = date('y/m/d H:i:s');
+    
+  echo '<b> Fecha de creacion de cookie: </b>'.$FechaHoy.'<br>';
+  setcookie("Ultima_visita",$FechaHoy,time()+(7*24*60*60));
+  ?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
