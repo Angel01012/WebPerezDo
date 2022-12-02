@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="miFormulario">
+        <label for="Nombre">Nombre</label>
+        <input id=" Nombre" name="Nombre" type="text">
+        <input type="button" id="btn" value="Crear PDF">
+    </form>
+    <script>
+        document.getElementById("btn").addEventListener("click", async function () {
+            let miForm =  document.getElementById('miFormulario');
+            let bodyContent = new FormData(miForm);
+
+            let response = await fetch("http://localhost/WebPerezDo/Parcial%203/pfd/crearpdf.php", { 
+  method: "POST",
+  body: bodyContent
+});
+let archivoPdf = await response.blob();
+let archivoUrl = URL.createObjectURL(archivoPdf);
+window.open(archivoUrl);
+        })
+    </script>
+    
+</body>
+</html>
